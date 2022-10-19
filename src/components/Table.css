@@ -13,7 +13,7 @@ body {
   margin-top: 20%;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 90%;
 }
 
 .darkTable td, .darkTable th {
@@ -22,8 +22,8 @@ body {
 }
 
 .darkTable tbody td {
-  color: rgb(230, 230, 230);
-  font-size: 13px;
+  color: rgb(12, 0, 0);
+  font-size: 15px;
 }
 
 .darkTable tr:nth-child( even ) {
@@ -39,7 +39,7 @@ body {
   border-left: 2px solid rgb(74, 74, 74);
   color: rgb(230, 230, 230);
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 500;
   text-align: center;
 }
 
