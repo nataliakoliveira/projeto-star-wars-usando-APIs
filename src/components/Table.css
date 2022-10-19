@@ -1,0 +1,63 @@
+body {
+  background-image: url('../imgs/fundo-star-wars\ \(1\)\ 1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.7;
+}
+
+.darkTable {
+  background-color: rgb(74, 74, 74);
+  border: 2px solid black;
+  border-collapse: collapse;
+  height: 200px;
+  margin-top: 20%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.darkTable td, .darkTable th {
+  border: 1px solid rgb(74, 74, 74);
+  padding: 3px 2px;
+}
+
+.darkTable tbody td {
+  color: rgb(230, 230, 230);
+  font-size: 13px;
+}
+
+.darkTable tr:nth-child( even ) {
+  background: rgb(230, 230, 230);
+}
+
+.darkTable thead {
+  background: black;
+  border-bottom: 3px solid black;
+}
+
+.darkTable thead th {
+  border-left: 2px solid rgb(74, 74, 74);
+  color: rgb(230, 230, 230);
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.darkTable thead th:first-child {
+  border-left: none;
+}
+
+/* .darkTable tfoot {
+  color: rgb(230, 230, 230);
+  background: #000000;
+  background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+  background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  border-top: 1px solid #4A4A4A;
+  font-size: 12px;
+  font-weight: 500;
+} */
+
+.darkTable tfoot td {
+  font-size: 12px;
+}
