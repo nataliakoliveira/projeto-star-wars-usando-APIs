@@ -5,7 +5,8 @@ import './Form.css';
 function Form() {
   const { data, setData, FilterText, handleChange, filterColuna,
     setFilterColuna, filterComparacao, setFilterComparacao,
-    filterInputNum, setFilterInputNum } = useContext(StarWarsContext);
+    filterInputNum, setFilterInputNum, columnFilter2,
+    setColumnFilter2 } = useContext(StarWarsContext);
 
   const handleFilter = () => {
     if (filterComparacao === 'maior que') {
@@ -22,6 +23,8 @@ function Form() {
       const filtro = data.filter((elem) => elem[filterColuna] === filterInputNum);
       setData(filtro);
     }
+    setFilterColuna(columnFilter2[0]);
+    setColumnFilter2(columnFilter2.filter((opt) => opt !== filterColuna));
   };
 
   return (
@@ -43,11 +46,16 @@ function Form() {
             value={ filterColuna }
             onChange={ ({ target }) => setFilterColuna(target.value) }
           >
-            <option>population</option>
+            {/*            <option>population</option>
             <option>orbital_period</option>
             <option>diameter</option>
             <option>rotation_period</option>
-            <option>surface_water</option>
+            <option>surface_water</option> */}
+            {columnFilter2.map((elem, index) => (
+              <option key={ index }>
+                {elem}
+              </option>
+            ))}
           </select>
         </label>
         <label htmlFor="Operador" className="titulo">

@@ -2,12 +2,21 @@ import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import StarWarsContext from './StarWarsContext';
 
+const array = [
+  'population',
+  'orbital_period',
+  'diameter',
+  'rotation_period',
+  'surface_water',
+];
+
 function StarWarsProvider({ children }) {
   const [data, setData] = useState([]);
   const [filterText, setFilter] = useState('');
   const [filterColuna, setFilterColuna] = useState('population');
   const [filterComparacao, setFilterComparacao] = useState('maior que');
   const [filterInputNum, setFilterInputNum] = useState(0);
+  const [columnFilter2, setColumnFilter2] = useState(array);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -35,7 +44,11 @@ function StarWarsProvider({ children }) {
     setFilterComparacao,
     filterInputNum,
     setFilterInputNum,
-  }), [data, filterText, filterColuna, filterComparacao, filterInputNum]);
+    columnFilter2,
+    setColumnFilter2,
+  }), [
+    data, filterText, filterColuna, filterComparacao,
+    filterInputNum, columnFilter2]);
 
   return (
     <StarWarsContext.Provider value={ values }>
