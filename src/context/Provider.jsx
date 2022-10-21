@@ -5,6 +5,9 @@ import StarWarsContext from './StarWarsContext';
 function StarWarsProvider({ children }) {
   const [data, setData] = useState([]);
   const [filterText, setFilter] = useState('');
+  const [filterColuna, setFilterColuna] = useState('population');
+  const [filterComparacao, setFilterComparacao] = useState('maior que');
+  const [filterInputNum, setFilterInputNum] = useState(0);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -23,9 +26,16 @@ function StarWarsProvider({ children }) {
 
   const values = useMemo(() => ({
     data,
+    setData,
     filterText,
     handleChange,
-  }), [data, filterText]);
+    filterColuna,
+    setFilterColuna,
+    filterComparacao,
+    setFilterComparacao,
+    filterInputNum,
+    setFilterInputNum,
+  }), [data, filterText, filterColuna, filterComparacao, filterInputNum]);
 
   return (
     <StarWarsContext.Provider value={ values }>
