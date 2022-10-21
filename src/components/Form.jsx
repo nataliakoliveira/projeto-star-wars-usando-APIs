@@ -1,5 +1,6 @@
 import { React, useContext } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
+import './Form.css';
 
 function Form() {
   const { data, setData, FilterText, handleChange, filterColuna,
@@ -27,50 +28,57 @@ function Form() {
     <form>
       <input
         type="text"
+        className="inputName"
         data-testid="name-filter"
         onChange={ handleChange }
         value={ FilterText }
         placeholder="Digite o nome de um planeta"
       />
-      <label htmlFor="coluna">
-        Coluna
-        <select
-          data-testid="column-filter"
-          value={ filterColuna }
-          onChange={ ({ target }) => setFilterColuna(target.value) }
+      <div className="form">
+        <label htmlFor="coluna" className="titulo">
+          Coluna
+          <select
+            data-testid="column-filter"
+            className="column"
+            value={ filterColuna }
+            onChange={ ({ target }) => setFilterColuna(target.value) }
+          >
+            <option>population</option>
+            <option>orbital_period</option>
+            <option>diameter</option>
+            <option>rotation_period</option>
+            <option>surface_water</option>
+          </select>
+        </label>
+        <label htmlFor="Operador" className="titulo">
+          Operador
+          <select
+            data-testid="comparison-filter"
+            className="comparison"
+            value={ filterComparacao }
+            onChange={ ({ target }) => setFilterComparacao(target.value) }
+          >
+            <option>menor que</option>
+            <option>maior que</option>
+            <option>igual a</option>
+          </select>
+        </label>
+        <input
+          type="number"
+          data-testid="value-filter"
+          className="inputValue"
+          value={ filterInputNum }
+          onChange={ ({ target }) => setFilterInputNum(target.value) }
+        />
+        <button
+          type="button"
+          data-testid="button-filter"
+          className="btnFilter"
+          onClick={ handleFilter }
         >
-          <option>population</option>
-          <option>orbital_period</option>
-          <option>diameter</option>
-          <option>rotation_period</option>
-          <option>surface_water</option>
-        </select>
-      </label>
-      <label htmlFor="Operador">
-        Operador
-        <select
-          data-testid="comparison-filter"
-          value={ filterComparacao }
-          onChange={ ({ target }) => setFilterComparacao(target.value) }
-        >
-          <option>menor que</option>
-          <option>maior que</option>
-          <option>igual a</option>
-        </select>
-      </label>
-      <input
-        type="number"
-        data-testid="value-filter"
-        value={ filterInputNum }
-        onChange={ ({ target }) => setFilterInputNum(target.value) }
-      />
-      <button
-        type="button"
-        data-testid="button-filter"
-        onClick={ handleFilter }
-      >
-        Filtrar
-      </button>
+          Filtrar
+        </button>
+      </div>
     </form>
   );
 }

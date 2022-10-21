@@ -39,7 +39,7 @@ function Table() {
                     <td>{planets.terrain}</td>
                     <td>{planets.surface_water}</td>
                     <td>{planets.population}</td>
-                    <td>{planets.films}</td>
+                    <td className="films">{planets.films}</td>
                     <td>{planets.created}</td>
                     <td>{planets.edited}</td>
                     <td>{planets.url}</td>

@@ -1,0 +1,69 @@
+.inputName {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  height: 42px;
+  left: 302px;
+  margin-left: 20%;
+  top: 761px;
+  width: 671px;
+}
+
+.column {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.comparison {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.inputValue {
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 42px;
+  left: 450px;
+  margin-top: 2%;
+  top: 881px;
+  width: 91px;
+}
+
+.titulo {
+  align-items: center;
+  color: #b2b1b1;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 18px;
+  margin-top: 2%;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnFilter {
+  align-items: center;
+  background-image: url('../imgs/fundo-star-wars\ \(1\)\ 1.png');
+  border: 1px solid yellow;
+  border-radius: 5px;
+  color: yellow;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  height: 85px;
+  justify-content: center;
+  line-height: 18px;
+  margin-top: 2%;
+  text-align: center;
+  text-transform: uppercase;
+  top: 856px;
+  width: 91px;
+}

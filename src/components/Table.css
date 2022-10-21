@@ -1,19 +1,17 @@
 body {
-  background-image: url('../imgs/fundo-star-wars\ \(1\)\ 1.png');
+  background-image: url('../imgs/Star-wars-logo-new-tall.webp');
   background-repeat: no-repeat;
   background-size: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .darkTable {
   background-color: rgb(74, 74, 74);
   border: 2px solid black;
   border-collapse: collapse;
-  height: 200px;
-  margin-top: 20%;
-  position: absolute;
+  margin-top: 10%;
   text-align: center;
-  width: 90%;
+  width: 20%;
 }
 
 .darkTable td, .darkTable th {
@@ -23,16 +21,20 @@ body {
 
 .darkTable tbody td {
   color: rgb(12, 0, 0);
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .darkTable tr:nth-child( even ) {
   background: rgb(230, 230, 230);
+  border: 1px solid rgb(74, 74, 74);
 }
 
 .darkTable thead {
-  background: black;
-  border-bottom: 3px solid black;
+  background: #2f3136;
+  border: 1px solid black;
+  border-radius: 1px;
 }
 
 .darkTable thead th {
@@ -60,4 +62,9 @@ body {
 
 .darkTable tfoot td {
   font-size: 12px;
+}
+
+.films {
+  max-width: 200px;
+  word-break: keep-all;
 }
