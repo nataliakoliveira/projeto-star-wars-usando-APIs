@@ -1,3 +1,7 @@
+body {
+  font-family: 'Ruluko', sans-serif;
+}
+
 .inputName {
   border: 1px solid white;
   border-radius: 5px;
@@ -14,6 +18,16 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
+  margin-top: 3%;
+}
+
+.column2 {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  height: 20px;
+  line-height: 18px;
+  margin-top: 3%;
 }
 
 .comparison {
@@ -21,6 +35,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
+  margin-top: 3%;
 }
 
 .inputValue {
@@ -46,7 +61,9 @@
 
 .form {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-left: 20%;
+  width: 70%;
 }
 
 .btnFilter {
@@ -66,4 +83,15 @@
   text-transform: uppercase;
   top: 856px;
   width: 91px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 1%;
+}
+
+.bolinha {
+  background-color: yellow;
 }

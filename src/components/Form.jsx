@@ -86,6 +86,38 @@ function Form() {
         >
           Filtrar
         </button>
+        <label htmlFor="column" className="titulo">
+          Ordenar
+          <select
+            className="column2"
+            value={ filterColuna }
+            onChange={ ({ target }) => setFilterColuna(target.value) }
+          >
+            <option>population</option>
+            <option>orbital_period</option>
+            <option>diameter</option>
+            <option>rotation_period</option>
+            <option>surface_water</option>
+          </select>
+        </label>
+        <div className="radio">
+          <label htmlFor="radio" className="titulo">
+            <input type="radio" className="bolinha" />
+            Ascendente
+          </label>
+          <label htmlFor="radio" className="titulo">
+            <input type="radio" className="bolinha" />
+            Descendente
+          </label>
+        </div>
+        <button
+          type="button"
+          data-testid="button-filter"
+          className="btnFilter"
+          onClick={ handleFilter }
+        >
+          ORDENAR
+        </button>
       </div>
     </form>
   );
